@@ -9,7 +9,7 @@ BOOL preferencePlistNeedsRedirection(NSString *plistPath)
 
 	if ([plistName hasPrefix:@"com.apple."] || [plistName hasPrefix:@"systemgroup.com.apple."] || [plistName hasPrefix:@"group.com.apple."]) return NO;
 
-	NSArray *additionalSystemPlistNames = @[
+	static NSArray *additionalSystemPlistNames = @[
 		@".GlobalPreferences.plist",
 		@".GlobalPreferences_m.plist",
 		@"bluetoothaudiod.plist",
